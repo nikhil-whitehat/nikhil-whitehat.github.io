@@ -66,6 +66,20 @@
 				</div>
 			</div>
 		</div>
+
+    <div>
+      <h3>ffmpeg cmds</h3>
+      <ul>
+        <li>
+          <pre>
+            ffmpeg -i input.mp4 -vf "chromakey=#3D995C:similarity=0.087:blend=0.0" -c:v libvpx-vp9 -pix_fmt yuva420p -crf 60 -c:a libopus -b:a 32k output.webm
+          </pre>
+          <p>
+            conversion working fine.
+          </p>
+        </li>
+      </ul>
+    </div>
 	</body>
 
 </html>
