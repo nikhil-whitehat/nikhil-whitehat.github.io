@@ -27,9 +27,7 @@
 				Vivamus nec nisl diam. Praesent purus risus, varius et nibh quis, porttitor auctor lorem. Proin sit amet dui quam. Duis diam nunc, euismod a leo at, pellentesque convallis sapien. In a pretium tortor. Vestibulum quis massa eu sapien sagittis tincidunt eu ut massa. Ut non dictum diam.
 				<div style="position: absolute; top: 50px; left: 0;">
 					<video style="width: 400px" class="MuiCardMedia-root MuiCardMedia-media css-185ssj" 
-						src="
-							.\assets\output.webm
-						" 
+						src="https://earth9hero.s3.us-east-2.amazonaws.com/development/Testing/output.webm" 
 					id="player" preload="auto" autoplay controls></video>
 				</div>
 			</div>
@@ -43,9 +41,7 @@
 				Vivamus nec nisl diam. Praesent purus risus, varius et nibh quis, porttitor auctor lorem. Proin sit amet dui quam. Duis diam nunc, euismod a leo at, pellentesque convallis sapien. In a pretium tortor. Vestibulum quis massa eu sapien sagittis tincidunt eu ut massa. Ut non dictum diam.
 				<div style="position: absolute; top: 50px; left: 0;">
 					<video style="width: 400px" class="MuiCardMedia-root MuiCardMedia-media css-185ssj" 
-						src="
-							.\assets\output1.mov
-						" 
+						src="https://earth9hero.s3.us-east-2.amazonaws.com/development/Testing/output1.mov" 
 					id="player" preload="auto" autoplay controls></video>
 				</div>
 			</div>
@@ -59,23 +55,34 @@
 				Vivamus nec nisl diam. Praesent purus risus, varius et nibh quis, porttitor auctor lorem. Proin sit amet dui quam. Duis diam nunc, euismod a leo at, pellentesque convallis sapien. In a pretium tortor. Vestibulum quis massa eu sapien sagittis tincidunt eu ut massa. Ut non dictum diam.
 				<div style="position: absolute; top: 50px; left: 0;">
 					<video style="width: 400px" class="MuiCardMedia-root MuiCardMedia-media css-185ssj" 
-						src="
-							.\assets\output2.mov
-						" 
+						src="https://earth9hero.s3.us-east-2.amazonaws.com/development/Testing/output2.mov" 
 					id="player" preload="auto" autoplay controls></video>
 				</div>
 			</div>
 		</div>
 
     <div>
+      <p>output.webm</p>
       <h3>ffmpeg cmds</h3>
       <ul>
         <li>
-          <pre>
-            ffmpeg -i input.mp4 -vf "chromakey=#3D995C:similarity=0.087:blend=0.0" -c:v libvpx-vp9 -pix_fmt yuva420p -crf 60 -c:a libopus -b:a 32k output.webm
-          </pre>
+          <pre>ffmpeg -i input.mp4 -vf "chromakey=#3D995C:similarity=0.087:blend=0.0" -c:v libvpx-vp9 -pix_fmt yuva420p -crf 60 -c:a libopus -b:a 32k output.webm</pre>
           <p>
-            conversion working fine.
+            conversion working fine for webm.
+          </p>
+        </li>
+        <li>
+          <p>output1.mov</p>
+          <pre>ffmpeg -i input.mp4 -filter_complex "[0:v]chromakey=0x3D995C:0.1:0.0[v]" -map "[v]" -c:v png -c:a copy output.mov</pre>
+          <p>
+            (X)
+          </p>
+        </li>
+        <li>
+          <p>output2.mov</p>
+          <pre>ffmpeg -i input.mp4 -vf "[0:v]chromakey=0x3D995C:0.1:0.0[v]" -c:v png -c:a copy output.mov</pre>
+          <p>
+            (X)
           </p>
         </li>
       </ul>
