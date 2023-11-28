@@ -71,6 +71,20 @@
 					id="player" preload="auto" autoplay controls></video>
 				</div>
 			</div>
+      
+			<div style="position: relative; width: 500px; display: inline-block;">
+        <h3>MOV FORMAT 2</h3>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus turpis sed tempus porta. Cras ultricies eros vel felis mattis, sit amet laoreet ipsum euismod. Proin est lorem, vulputate id nunc eu, elementum lacinia lacus. In tincidunt quam at rhoncus dignissim. Nullam sed elit condimentum, bibendum nibh eu, varius arcu. Ut enim nisi, finibus at consectetur et, ultrices nec tellus. Cras porta mattis metus quis cursus. Nam bibendum, libero vitae accumsan semper, diam mi luctus nisl, in viverra massa mi vel dolor.
+				Mauris lacinia libero sed eros vehicula vestibulum. Nam eget viverra leo, ac egestas augue. Pellentesque bibendum dolor nec ligula ullamcorper bibendum. Vestibulum lectus justo, pharetra imperdiet nunc eu, eleifend lobortis erat. Fusce gravida aliquet dapibus. Nullam efficitur ligula velit, vitae pharetra velit commodo id. Pellentesque sagittis quam magna, a vehicula dui aliquet sit amet. Vivamus sapien risus, tincidunt nec eleifend nec, maximus id dui. Quisque consequat ante id ipsum suscipit, in dignissim felis pharetra. Suspendisse at nunc tellus.
+				Nullam scelerisque, mauris non dictum finibus, erat erat condimentum felis, at feugiat purus orci vel enim. Curabitur lacinia ex sed tincidunt consequat. Pellentesque accumsan bibendum est, sit amet ultricies nibh porttitor quis. Vestibulum at elit vel eros porta viverra at eget nunc. Fusce blandit posuere felis id rutrum. In malesuada purus in aliquam sagittis. Sed vel tellus sed est blandit blandit. Pellentesque at nulla ipsum. Morbi quis nulla vel justo lacinia mattis a vel dolor. Curabitur sagittis, mauris sodales vulputate egestas, sapien lacus pharetra arcu, dictum hendrerit lorem mauris vehicula orci. Donec sapien elit, vehicula quis eros in, ultrices tincidunt nisl. Mauris at nisi lectus. Etiam dapibus, libero id sagittis maximus, nibh leo vestibulum turpis, nec venenatis urna est a nunc. Sed vehicula mattis ante in vehicula. Duis iaculis sodales purus, ac mollis eros commodo at.
+				Mauris varius ornare sapien, at tempor mi fermentum sit amet. Nam mattis a nulla id congue. Sed nec aliquet eros. Praesent nec purus eros. Nam viverra lectus maximus lectus efficitur faucibus. Pellentesque semper lorem ante, eget hendrerit ex consectetur quis. Aenean feugiat sapien vitae enim fermentum consectetur. Suspendisse ac enim sapien. Cras dignissim turpis mauris, sed blandit nunc pellentesque non.
+				Vivamus nec nisl diam. Praesent purus risus, varius et nibh quis, porttitor auctor lorem. Proin sit amet dui quam. Duis diam nunc, euismod a leo at, pellentesque convallis sapien. In a pretium tortor. Vestibulum quis massa eu sapien sagittis tincidunt eu ut massa. Ut non dictum diam.
+				<div style="position: absolute; top: 50px; left: 0;">
+					<video style="width: 400px" class="MuiCardMedia-root MuiCardMedia-media css-185ssj" 
+          src="https://earth9hero.s3.us-east-2.amazonaws.com/development/Testing/output4.mov" 
+					id="player" preload="auto" autoplay controls></video>
+				</div>
+			</div>
 
 
 		</div>
@@ -102,6 +116,13 @@
         <li>
           <p>output3.mov</p>
           <pre>ffmpeg -i 1.mp4 -filter_complex "[0:v]chromakey=0x00FF00:0.1:0.2[v]" -map "[v]" -c:v png -c:a copy output.mov</pre>
+          <p>
+            (X)
+          </p>
+        </li>
+        <li>
+          <p>output3.mov</p>
+          <pre> ffmpeg -i output.webm -c:v libx264 -pix_fmt yuv420p output.mov</pre>
           <p>
             (X)
           </p>
